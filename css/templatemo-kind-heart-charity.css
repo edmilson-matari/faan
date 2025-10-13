@@ -779,7 +779,7 @@ strong {
   NEWS         
 -----------------------------------------*/
 .news-detail-header-section {
-  background-image: url("../images/news/close-up-volunteer-oganizing-stuff-donation.jpg");
+  background-image: url("../images/news/neto-noticias.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1579,7 +1579,7 @@ blockquote::before {
   }
 
   #hero-slide .carousel-caption {
-    clip-path: polygon(100% 100%, 100% 100px, 0 100%);
+    /*clip-path: polygon(100% 100%, 100% 100px, 0 100%);*/
     padding-right: 50px;
     min-width: inherit;
     min-height: inherit;

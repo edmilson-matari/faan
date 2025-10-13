@@ -1,0 +1,87 @@
+/* --- GENERAL STYLE --- */
+#article {
+  font-family: "Times New Roman", Times, serif;
+  color: #222;
+  margin: 0;
+  background-color: #fff;
+  padding: 2.5rem;
+  line-height: 1.6;
+}
+
+main.regulamento {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* --- TITLE --- */
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  border-bottom: 2px solid #000;
+  padding-bottom: 0.4rem;
+  margin-bottom: 2.2rem;
+  color: #1a1a1a;
+}
+
+/* --- ARTICLES SECTION --- */
+.artigos {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.coluna {
+  flex: 1;
+  text-align: justify;
+}
+
+/* --- ARTICLE HEADER --- */
+h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: none;
+  color: #333;
+  border-bottom: 1px dashed #aaa;
+  padding-bottom: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.artigo-num {
+  font-weight: bold;
+}
+
+/* --- PARAGRAPHS & LISTS --- */
+p {
+  margin-bottom: 1rem;
+}
+
+ol {
+  list-style-type: decimal;
+  margin-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.8rem;
+}
+
+/* --- STRONG TEXT --- */
+strong {
+  font-weight: bold;
+  color: #000;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .artigos {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  h2 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

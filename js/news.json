@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "title": "Literatura infanto-juvenil debatida pela Universidade Agostinho Neto",
+    "content": "Literatura infanto-juvenil debatida pela Universidade Agostinho Neto em parceria com a Universidade Federal de Ouro Preto, do Brasil e o Ministério da Educação...",
+    "date": "30 de Janeiro de 2025",
+    "cover": "images/causes/debate.jpg"
+  },
+
+  {
+    "id": 2,
+    "title": "NOTA DE CONDOLÊNCIAS",
+    "content": "A Fundação Dr. António Agostinho manifestou a sua consternação pelo passamento físico de Sua Excelência o Presidente Samuel Daniel Shafiishuna “Sam Nujoma”, falecido por doença no dia 8 de Fevereiro de 2025, aos 95 anos de idade, na República da Namíbia.",
+    "date": "30 de Janeiro de 2025",
+    "cover": "images/causes/nota-de-condolencias.jpg"
+  },
+
+  {
+    "id": 3,
+    "title": "Reforço de laços bilaterais de solidariedade e cooperação",
+    "content": "Maria Eugénia Neto oferece edições sobre Agostinho Neto ao Presidente da Assembleia Nacional da República de Cabo Verde, Austelino Tavares Correia...",
+    "date": "30 de Janeiro de 2025",
+    "cover": "images/causes/premiacao.jpg"
+  },
+
+  {
+    "id": 4,
+    "title": "Celebração do centenário de Irene Agostinho Neto no Centro Cultural Dr António Agostinho Neto no Bairro Operário",
+    "content": "Celebração do centenário de Irene Agostinho Neto no Centro Cultural Dr António Agostinho Neto no Bairro Operário",
+    "date": "20 de Fevereiro 2025",
+    "cover": "images/news/centenario.jpg"
+  },
+
+  {
+    "id": 5,
+    "title": "INTERVENÇÃO DE EUGÉNIA NETO NO WORKSHOP OS DESAFIOS DO AMBIENTE «SEGURANÇA ALIMENTAR, ALTERAÇÕES CLIMÁTICAS E TURISMO SUSTENTÁVEL»",
+    "content": "Celebração do centenário de Irene Agostinho Neto no Centro Cultural Dr António Agostinho Neto no Bairro Operário",
+    "date": " 30 de Janeiro de 2025",
+    "cover": "images/news/celebracao.jpg"
+  },
+  {
+    "id": 6,
+    "title": "INAUGURAÇÃO DO COMPLEXO POLIDESPORTIVO “MARIA EUGÉNIA NETO” NA URBANIZAÇÃO KK5800",
+    "content": "INAUGURAÇÃO DO COMPLEXO POLIDESPORTIVO “MARIA EUGÉNIA NETO” NA URBANIZAÇÃO KK5800",
+    "date": " 30 de Janeiro de 2025",
+    "cover": "images/news/celebracao.jpg"
+  }
+]

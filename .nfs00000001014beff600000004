@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regulamentação</title>
+    <link rel="stylesheet" href="style_artigo.css" />
+  </head>
+
+  <body>
+    <main class="regulamento">
+      <h1>Regulamentação</h1>
+
+      <section class="artigos">
+        <div class="coluna">
+          <h2>
+            <span>Objecto, patrocínio, âmbito</span>
+            <span class="artigo-num">Artigo 1</span>
+          </h2>
+
+          <p>
+            A Fundação Dr. António Agostinho Neto (FAAN) e o Instituto
+            Afro-brasileiro de Ensino Superior (IABES), representado pela
+            Faculdade Zumbi dos Palmares (FZP), promovem um concurso
+            internacional, de dois em dois anos, designado
+            <strong
+              >PRÉMIO INTERNACIONAL DE INVESTIGAÇÃO HISTÓRICA AGOSTINHO
+              NETO</strong
+            >, nos termos e condições deste regulamento.
+          </p>
+
+          <p>
+            O Prémio Internacional de Investigação Histórica Agostinho Neto é
+            patrocinado pela FAAN e pelo IABES. O Prémio Internacional de
+            Investigação Histórica Agostinho Neto destina-se a galardoar as
+            obras de investigação escritas sobre Angola, África, Agostinho Neto,
+            Brasil, a Diáspora e Afrodescendentes que contribuam para o melhor
+            conhecimento da história de Angola, do Brasil e de África.
+          </p>
+        </div>
+
+        <div class="coluna">
+          <h2>
+            <span>Periodicidade e Prémio</span>
+            <span class="artigo-num">Artigo 2</span>
+          </h2>
+
+          <ol>
+            <li>
+              Este concurso atribui, bianualmente, à melhor obra, o
+              <strong
+                >PRÉMIO INTERNACIONAL DE INVESTIGAÇÃO HISTÓRICA AGOSTINHO
+                NETO</strong
+              >.
+            </li>
+
+            <li>
+              Ao(s) autor(es) da obra distinguida com o
+              <strong
+                >PRÉMIO INTERNACIONAL DE INVESTIGAÇÃO HISTÓRICA AGOSTINHO
+                NETO</strong
+              >
+              serão entregues um diploma, um troféu e a quantia equivalente a
+              50.000,00 USD (cinquenta mil Dólares dos EUA).
+            </li>
+
+            <li>Poderão ser atribuídas Menções Honrosas.</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

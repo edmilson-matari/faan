@@ -1,0 +1,104 @@
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.membros {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.membros h1 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.membros h2 {
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 3rem;
+  font-weight: normal;
+}
+
+/* PRESIDENT (TOP CARD) */
+.presidente {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+/* VICE PRESIDENTS (BOTTOM ROW) */
+.vice-presidentes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* CARD STYLE */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.presidente .card {
+  width: 270px; /* Slightly larger */
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* AVATAR AREA */
+.card-top {
+  background-color: #d7bfdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.card-top img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #ccc;
+  object-fit: cover;
+}
+
+/* TEXT AREA */
+.card-body {
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.card-body h3 {
+  font-size: 0.95rem;
+  color: #7a2e77;
+  margin: 0.4rem 0;
+}
+
+.card-body p {
+  font-size: 0.8rem;
+  color: #333;
+  margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .vice-presidentes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .presidente .card {
+    width: 240px;
+  }
+}

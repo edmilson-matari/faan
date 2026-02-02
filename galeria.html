@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description" content="Galeria de Fotos da Fundação Dr. António Agostinho Neto" />
+    <meta name="author" content="" />
+
+    <title>Galeria - FAA - Fundação Dr. António Agostinho Neto</title>
+
+    <!-- CSS FILES -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet" />
+
+    <style>
+      .gallery-card {
+        position: relative;
+        border-radius: var(--border-radius-medium);
+        overflow: hidden;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .gallery-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .gallery-card img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-card:hover img {
+        transform: scale(1.05);
+      }
+
+      .gallery-card .gallery-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        padding: 20px;
+        color: white;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-card:hover .gallery-overlay {
+        transform: translateY(0);
+      }
+
+      .gallery-card .gallery-overlay h5 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+      }
+
+      .gallery-card .gallery-overlay p {
+        font-size: 0.85rem;
+        margin-bottom: 0;
+        opacity: 0.8;
+      }
+
+      .page-header {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url("images/slide/poesia_e_foto.jpg");
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0;
+        text-align: center;
+        color: white;
+      }
+
+      .page-header h1 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+      }
+
+      .page-header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+
+      .gallery-category {
+        background: var(--section-bg-color);
+        padding: 10px 25px;
+        border-radius: 50px;
+        display: inline-block;
+        margin-bottom: 30px;
+        font-weight: 600;
+        color: var(--secondary-color);
+      }
+
+      .gallery-section-title {
+        position: relative;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+      }
+
+      .gallery-section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: var(--primary-color);
+      }
+
+      /* Lightbox styles */
+      .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .lightbox.active {
+        display: flex;
+      }
+
+      .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+      }
+
+      .lightbox-close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+        z-index: 10000;
+      }
+
+      .gallery-card {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body id="section_1">
+    <header class="site-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-12 d-flex flex-wrap">
+            <p class="d-flex me-4 mb-0">
+              <i class="bi-geo-alt me-2"></i>
+              Avenida António Agostinho Neto, Edifício AAA
+            </p>
+
+            <p class="d-flex mb-0">
+              <i class="bi-envelope me-2"></i>
+
+              <a href="mailto:fundagostinhoneto@gmail.com">
+                fundagostinhoneto@gmail.com
+              </a>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
+            <ul class="social-icon">
+              <li class="social-icon-item">
+                <a
+                  href="https://web.facebook.com/fundagostinhoneto?_rdc=1&_rdr"
+                  class="social-icon-link bi-facebook"
+                ></a>
+              </li>
+
+              <li class="social-icon-item">
+                <a
+                  href="https://www.youtube.com/channel/UCY0sOUfGEbTUoLFVE34X_Dw"
+                  class="social-icon-link bi-youtube"
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="images/logo_faan.png"
+            class="logo img-fluid"
+            alt="Kind Heart Charity"
+          />
+          <span>
+            Fundação
+            <small>Dr. António Agostinho Neto</small>
+          </span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link click-scroll" href="index.html">Página Inicial</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link click-scroll" href="index.html#section_2">Sobre</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link click-scroll" href="index.html#section_3">Publicações</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link click-scroll" href="index.html#section_4">Breve historial</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link click-scroll dropdown-toggle"
+                href="index.html#section_5"
+                id="navbarLightDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Notícias</a
+              >
+
+              <ul
+                class="dropdown-menu dropdown-menu-light"
+                aria-labelledby="navbarLightDropdownMenuLink"
+              >
+                <li>
+                  <a class="dropdown-item" href="index.html#section_5">Mais recentes</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarMultimediaDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Multimédia</a
+              >
+
+              <ul
+                class="dropdown-menu dropdown-menu-light"
+                aria-labelledby="navbarMultimediaDropdown"
+              >
+                <li>
+                  <a class="dropdown-item" href="video.html">Vídeos</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="galeria.html">Galeria</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="founding.html">Membros</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link click-scroll" href="index.html#section_6">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="container">
+          <h1><i class="bi-images me-3"></i>Galeria de Fotos</h1>
+          <p>Momentos marcantes da Fundação Dr. António Agostinho Neto</p>
+        </div>
+      </div>
+
+      <!-- Gallery Section - Eventos -->
+      <section class="section-padding">
+        <div class="container">
+          <h2 class="gallery-section-title">Eventos e Cerimónias</h2>
+          
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img src="images/news/centenario.jpg" alt="Celebração do Centenário">
+                <div class="gallery-overlay">
+                  <h5>Celebração do Centenário</h5>
+                  <p>Centro Cultural Dr António Agostinho Neto</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img src="images/news/celebracao.jpg" alt="Workshop Ambiental">
+                <div class="gallery-overlay">
+                  <h5>Workshop Ambiental</h5>
+                  <p>Segurança Alimentar e Alterações Climáticas</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img src="images/news/inaugauracao.jpg" alt="Inauguração Complexo Polidesportivo">
+                <div class="gallery-overlay">
+                  <h5>Inauguração</h5>
+                  <p>Complexo Polidesportivo Maria Eugénia Neto</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section - Fundadores -->
+      <section class="section-padding section-bg">
+        <div class="container">
+          <h2 class="gallery-section-title">Fundadores e Membros</h2>
+          
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img src="images/avatar/maria_founder.jpeg" alt="Maria Eugénia Neto">
+                <div class="gallery-overlay">
+                  <h5>Maria Eugénia Neto</h5>
+                  <p>Presidente da Fundação</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img src="images/fundadora.jpg" alt="Fundadora">
+                <div class="gallery-overlay">
+                  <h5>Primeira-Dama Angolana</h5>
+                  <p>Escritora e Jornalista</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img src="images/avatar/neto-perfil.jpg" alt="Agostinho Neto">
+                <div class="gallery-overlay">
+                  <h5>Dr. António Agostinho Neto</h5>
+                  <p>Primeiro Presidente de Angola</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section - Legado -->
+      <section class="section-padding">
+        <div class="container">
+          <h2 class="gallery-section-title">Legado e Memória</h2>
+          
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img src="images/slide/luta-e-libertacao.webp" alt="Luta pela Libertação">
+                <div class="gallery-overlay">
+                  <h5>Luta pela Libertação</h5>
+                  <p>Independência Nacional de Angola</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img src="images/slide/pan-africanismo.jpg" alt="Pan-Africanismo">
+                <div class="gallery-overlay">
+                  <h5>Unidade Africana</h5>
+                  <p>Solidariedade e Pan-Africanismo</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img src="images/slide/poesia_e_foto.jpg" alt="Poesia e Humanismo">
+                <div class="gallery-overlay">
+                  <h5>Poesia e Humanismo</h5>
+                  <p>Sagrada Esperança</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section - Prémios -->
+      <section class="section-padding section-bg">
+        <div class="container">
+          <h2 class="gallery-section-title">Prémios e Reconhecimentos</h2>
+          
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img src="images/icons/sagrada-esperanca-premio.jpg" alt="Prémio Sagrada Esperança">
+                <div class="gallery-overlay">
+                  <h5>Prémio Sagrada Esperança</h5>
+                  <p>Reconhecimento Literário</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img src="images/icons/piihn.jpeg" alt="PIIHAN">
+                <div class="gallery-overlay">
+                  <h5>PIIHAN</h5>
+                  <p>Programa de Investigação</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="gallery-card" onclick="openLightbox(this)">
+                <img src="images/icons/livro-sem-treguas.jpg" alt="Livro Sem Tréguas">
+                <div class="gallery-overlay">
+                  <h5>Publicações</h5>
+                  <p>Obras Literárias</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <span class="lightbox-close">&times;</span>
+      <img src="" alt="Imagem ampliada" id="lightbox-img">
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-12 mb-4">
+            <img src="images/logo_faan.png" class="logo img-fluid" alt="" />
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 mb-4">
+            <h5 class="site-footer-title mb-3">Links Rápidos</h5>
+
+            <ul class="footer-menu">
+              <li class="footer-menu-item">
+                <a href="#" class="footer-menu-link">Nossa história</a>
+              </li>
+
+              <li class="footer-menu-item">
+                <a href="founding.html" class="footer-menu-link">Membros constituintes</a>
+              </li>
+
+              <li class="footer-menu-item">
+                <a href="#" class="footer-menu-link">Notícias</a>
+              </li>
+
+              <li class="footer-menu-item">
+                <a href="#" class="footer-menu-link">Sobre</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 mx-auto">
+            <h5 class="site-footer-title mb-3">Informações de Contacto</h5>
+
+            <p class="text-white d-flex mb-2">
+              <i class="bi-telephone me-2"></i>
+
+              <a href="tel:+244 222 335431" class="site-footer-link">
+                +244 222 335431
+              </a>
+            </p>
+
+            <p class="text-white d-flex">
+              <i class="bi-envelope me-2"></i>
+
+              <a href="mailto:fundagostinhoneto@gmail.com" class="site-footer-link">
+                fundagostinhoneto@gmail.com
+              </a>
+            </p>
+
+            <p class="text-white d-flex mt-3">
+              <i class="bi-geo-alt me-2"></i>
+              Avenida António Agostinho Neto, Edifício AAA, 1ª Andar, Praia do
+              Bispo, Luanda - Angola.
+            </p>
+
+            <a href="https://share.google/tqzqNdyFUlPxig68V" class="custom-btn btn mt-3">Peça direcção</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-7 col-12">
+              <p class="copyright-text mb-0">
+                Copyright © 2025
+                <a href="index.html">FAAN - Fundação Dr. António Agostinho Neto.</a>
+                Todos os Direitos Reservados
+              </p>
+            </div>
+
+            <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
+              <ul class="social-icon">
+                <li class="social-icon-item">
+                  <a href="https://web.facebook.com/fundagostinhoneto?_rdc=1&_rdr" class="social-icon-link bi-facebook"></a>
+                </li>
+
+                <li class="social-icon-item">
+                  <a href="https://www.youtube.com/channel/UCY0sOUfGEbTUoLFVE34X_Dw" class="social-icon-link bi-youtube"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+
+    <script>
+      function openLightbox(element) {
+        const img = element.querySelector('img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        
+        lightboxImg.src = img.src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      // Close on ESC key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeLightbox();
+        }
+      });
+    </script>
+  </body>
+</html>
